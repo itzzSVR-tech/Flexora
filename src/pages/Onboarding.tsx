@@ -120,6 +120,11 @@ export default function Onboarding() {
                                 onSubmit={handleQuestionnaire}
                                 className="space-y-5"
                             >
+                                {error && (
+                                    <div className="text-red-500 bg-red-500/10 p-3 rounded-lg text-sm border border-red-500/20">
+                                        {error}
+                                    </div>
+                                )}
                                 <Select
                                     id="goal"
                                     label="What's your primary goal?"
